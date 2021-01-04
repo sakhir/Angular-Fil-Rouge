@@ -1,18 +1,69 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuthComponent } from './auth/auth.component';
+
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
+import { AppheaderComponent } from './appheader/appheader.component';
+import { AppfooterComponent } from './appfooter/appfooter.component';
+import { AppmenuComponent } from './appmenu/appmenu.component';
+import { AppsettingComponent } from './appsetting/appsetting.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { ProfilComponent } from './admin/profil/profil.component';
+import { UsersComponent } from './admin/users/users.component';
+import { ProfilSortiComponent } from './admin/profil-sorti/profil-sorti.component';
+import { GroupCompetenceComponent } from './admin/group-competence/group-competence.component';
+import { ReferentielComponent } from './admin/referentiel/referentiel.component';
+import { PromoComponent } from './admin/promo/promo.component';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { CompetenceComponent } from './admin/competence/competence.component';
+import { UserCreateComponent } from './admin/users/user-create/user-create.component';
+import { GrpcCreateComponent } from './admin/group-competence/grpc-create/grpc-create.component';
+import { RefCreateComponent } from './admin/referentiel/ref-create/ref-create.component';
+import { CompetenceCreateComponent } from './admin/competence/competence-create/competence-create.component';
+import { InterceptorProvider } from 'src/_helpers/auth.interceptor';
+
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
-  ],
+    AppComponent,
+    AuthComponent,
+    AppheaderComponent,
+    AppfooterComponent,
+    AppmenuComponent,
+    AppsettingComponent,
+    DashboardComponent,
+    ProfilComponent,
+    UsersComponent,
+    ProfilSortiComponent,
+    GroupCompetenceComponent,
+    ReferentielComponent,
+    PromoComponent,
+    CompetenceComponent,
+    UserCreateComponent,
+    GrpcCreateComponent,
+    RefCreateComponent,
+    CompetenceCreateComponent
+    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    ScrollToModule.forRoot()
   ],
-  providers: [],
+  providers: [InterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

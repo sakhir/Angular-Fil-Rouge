@@ -1,0 +1,150 @@
+
+<div class="row  m-l-10 " >
+    <section class="content-header">
+        <h1>
+          Utilisateurs
+         
+        </h1>
+
+      </section>
+<div class="col-md-10 m-t-15 m-l-100">
+<!-- TABLE: LATEST ORDERS -->
+<div class="box box-info">
+    <div class="box-header with-border">
+      <h3 class="box-title">Liste des Utilisateurs</h3>
+
+      <div class="box-tools pull-right">
+        
+        <div class="input-group-btn">
+          
+          <button routerLink="/create-user" class="btn btn-info"><i class="fa fa-plus"></i></button>
+        </div>     
+       
+      </div>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+      <div class="table-responsive">
+        <table class="table no-margin">
+          <thead>
+          <tr>
+            <th>Avatar</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Mail</th>
+            <th>Profil</th>
+            <th>Actions</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let u of users">
+            <td>
+            <div class="user-panel">
+                <div class="pull-left image">
+                <img src="{{'data:image/jpg;base64,'+u.avatar}}" class="img-circle" alt="User Image">
+              </div>
+             </div>
+            </td>
+            <td>{{u.nom }}</td>
+            <td>{{u.prenom }}</td>
+            <td>{{u.email}}</td>
+            <td>{{u.profil}}</td>
+        
+            <td>
+                <button [routerLink]=""  class="btn btn-sm  btn-info "> Detais</button>
+                <button [routerLink]=""  class="btn btn-sm  btn-warning m-l-10 "> Editer</button>
+                <button [routerLink]=""  class="btn btn-sm  btn-danger  m-l-10  ">Supprimer</button>
+            
+            
+            </td>
+          
+          </tr>
+
+          <!-- <tr>
+            <td>
+            <div class="user-panel">
+                <div class="pull-left image">
+                <img src="../assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+              </div>
+             </div>
+            </td>
+            <td>Niang</td>
+            <td>ALy</td>
+            <td>AlytallNiang@gmail.com</td>
+            <td>FORMATEUR</td>
+        
+            <td>
+                <button [routerLink]=""  class="btn btn-sm  btn-info "> Detais</button>
+                <button [routerLink]=""  class="btn btn-sm  btn-warning m-l-10 "> Editer</button>
+                <button [routerLink]=""  class="btn btn-sm  btn-danger  m-l-10  "> Supprimer</button>
+            
+            
+            </td>
+          
+          </tr>
+
+          <tr>
+            <td>
+            <div class="user-panel">
+                <div class="pull-left image">
+                <img src="../assets/dist/img/user8-128x128.jpg" class="img-circle" alt="User Image">
+              </div>
+             </div>
+            </td>
+            <td>Mane</td>
+            <td>Yankhoba</td>
+            <td>Yankhoba@gmail.com</td>
+            <td>CM</td>
+        
+            <td>
+                <button [routerLink]=""  class="btn btn-sm  btn-info "> Detais</button>
+                <button [routerLink]=""  class="btn btn-sm  btn-warning m-l-10 "> Editer</button>
+                <button [routerLink]=""  class="btn btn-sm  btn-danger  m-l-10  "> Supprimer</button>
+            
+            
+            </td>
+          
+          </tr>
+          <tr>
+            <td>
+            <div class="user-panel">
+                <div class="pull-left image">
+                <img src="../assets/dist/img/user6-128x128.jpg" class="img-circle" alt="User Image">
+              </div>
+             </div>
+            </td>
+            <td>Fall</td>
+            <td>Sakhir</td>
+            <td>Sakhirfall@gmail.com</td>
+            <td>APPRENANT</td>
+        
+            <td>
+                <button [routerLink]=""  class="btn btn-sm  btn-info "> Detais</button>
+                <button [routerLink]=""  class="btn btn-sm  btn-warning m-l-10 "> Editer</button>
+                <button [routerLink]=""  class="btn btn-sm  btn-danger  m-l-10  "> Supprimer</button>
+            
+            
+            </td>
+          
+          </tr> -->
+              
+          </tbody>
+        </table>
+      </div>
+      <!-- /.table-responsive -->
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer clearfix">
+     
+      <a href="javascript:void(0)" *ngIf="prec" (click)="previous()"  class="btn btn-sm btn-default btn-flat pull-left">Precedent</a>
+      <a href="javascript:void(0)" *ngIf="suiv" (click)="next()" class="btn btn-sm btn-info btn-flat pull-right">Suivant</a>
+    </div>
+    <!-- /.box-footer -->
+  </div>
+  <!-- /.box -->
+</div>  
+
+
+
+
+</div>
